@@ -1,0 +1,36 @@
+{
+    "name": "codespikex/tiktokdownloader",
+    "description": "Download Video Downloader",
+    "type": "sass",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\":"app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CodeSpikeX",
+            "email": "codespikex@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "*",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-pdo": "*",
+        "codespikex/lite": "dev-master",
+        "nesbot/carbon": "^2.0@dev",
+      "ext-gd": "*",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "require-dev": {
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/lite"
+        }
+    ]
+}

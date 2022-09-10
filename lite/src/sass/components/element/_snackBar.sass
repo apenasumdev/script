@@ -1,0 +1,52 @@
+.snackbar-container
+  position: fixed
+  top: 4rem
+  left: 0
+  right: 0
+  margin: 0 auto
+  width: 100%
+  height: fit-content
+  display: flex
+  justify-content: center
+  font-family: inherit
+  z-index: 99999999
+  .snackbar
+    z-index: 100
+    background: var(--control-bg)
+    color: var(--controls-color)
+    padding: 0.6rem 2rem
+    min-width: 30rem
+    width: fit-content
+    font-size: 1rem
+    display: flex
+    align-items: center
+    font-weight: 400
+    border-radius: 5px
+    animation: snackbar-show 0.15s 1 ease-in-out
+    animation-direction: alternate
+    animation-fill-mode: forwards
+    &.hide
+      animation: snackbar-hide 0.15s 1 ease-in-out
+    @media screen and (max-width: 772px)
+      max-width: fit-content
+    i
+      margin-right: 1rem
+    p
+      text-align: center
+      width: calc(100% - 32px)
+      white-space: nowrap
+
+    @keyframes snackbar-show
+      from
+        transform: translateY(-2rem)
+        opacity: 0
+      to
+        transform: translateY(0)
+        opacity: 0.65
+    @keyframes snackbar-hide
+      from
+        transform: translateY(0)
+        opacity: 0.65
+      to
+        transform: translateY(-2rem)
+        opacity: 0

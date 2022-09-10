@@ -1,0 +1,78 @@
+:root {
+    /*
+    MAIN COLORS
+    */
+    --primary: #FE2C55;
+    --primary-soft: rgba(254, 44, 86, 0.4);
+    --accent: #000000;
+    --white: #ffff;
+
+    /*
+    BACKGROUND COLORS
+    */
+    --bg-light: #ffffff;
+    --bg-dark: #F5F6F6;
+    /*
+    BORDER COLORS
+    */
+    --border: #E3E3E4;
+    --border-light: #F1F1F2;
+    /*
+    TYPOGRAPHY
+    */
+    --font-family: "Fira Sans";
+    --text-regular: #000000;
+    --text-placeholder: #909399;
+    --text-heading-2: #7D7D7D;
+    --text-heading-3: #AFAFB5;
+    --text-heading-4: #F1F1F2;
+    --text-heading-5: #E3E3E4;
+    --text-on-primary: #ffffff;
+    --text-on-accent: #ffffff;
+    /*
+    HEADER PROPERTIES
+    */
+    --header-bg: var(--bg-light);
+    --header-border: var(--border);
+    --header-color: var(--text-regular);
+    --header-color-hover: var(--primary);
+    --header-height: 4.375rem;
+    --header-logo-filter: invert(0);
+    /*
+    HEADER SEARCH COLOR
+    */
+    --header-search-bg: var(--header-bg);
+    --header-search-border: var(--header-border);
+    --header-search-color: var(--header-color);
+    --header-search-color-hover: var(--header-color-hover);
+    /*
+    DRAWER COLORS
+    */
+    --drawer-bg: var(--bg-light);
+    --drawer-text: var(--text-regular);
+    --drawer-text-hover: var(--primary);
+    --drawer-text-header-color: var(--text-heading-3);
+
+    /*
+    FOOTER COLOR
+    */
+    --footer-bg: var(--accent);
+    --footer-border: var(--footer-bg);
+    --footer-text: var(--text-on-accent);
+    --footer-text-hover: var(--primary);
+    --footer-version-border: var(--text-heading-4);
+
+    /*
+    GREETING BAR
+    */
+    --greeting-bar-bg: var(--accent);
+    --greeting-bar-color: var(--text-on-accent);
+
+    /*
+    MORE CUSTOMIZATION
+    */
+    --ripple-effect: rgba(0,0,0,0.1);
+    --control-bg: #3E3C3A;
+    --controls-color: var(--text-on-accent);
+}
+

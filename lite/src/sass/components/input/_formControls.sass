@@ -1,0 +1,85 @@
+@mixin input
+  background-color: transparent
+  color: var(--text-regular)
+  font-size: .93rem
+  font-weight: 400
+  font-family: inherit
+  padding: 0.47rem 0.75rem
+  border: 1px solid var(--border)
+  border-radius: 5px
+  outline: 0
+  transition: outline 0.15s ease-in-out
+  @extend .scrollbar
+  &:focus
+    outline: 1px solid var(--primary)
+  &.mb-form
+    margin-bottom: 0.5rem
+
+  option
+    background: var(--bg-light)
+    color: var(--text-regular)
+    font-family: inherit
+
+.form-control
+  display: flex
+  flex-flow: column
+  width: 100%
+  &.mt
+    margin-top: 1.35rem
+  &.mb
+    margin-bottom: 2rem
+  label
+    color: var(--text-regular)
+    font-size: 0.75rem
+    font-family: inherit
+    text-transform: uppercase
+    font-weight: 500
+    padding: 0.3rem 0
+  input, textarea, select
+    @include input
+  textarea
+    max-width: 100%
+    min-width: 100%
+    width: 100%
+.submit-button
+  background: var(--primary)
+  color: var(--text-on-primary)
+  padding: 0.6rem 1rem
+  width: 100%
+  border: 0
+  font-family: inherit
+  transition: filter 0.15s, opacity 0.15s ease-in-out
+  font-size: 0.85rem
+  font-weight: 400
+  cursor: pointer
+  border-radius: 4px
+  outline: 0
+  &.inline
+    width: fit-content
+  &.right
+    margin-left: auto
+  &.padding
+    padding: 0.6rem 3rem
+    &.medium
+      font-size: 1rem
+      padding: 0.8rem 5rem
+  i.space
+    margin-left: 0.5rem
+  &.bottom
+    margin-top: auto !important
+    @media screen and (max-width: 772px)
+      margin-top: 1.98rem !important
+  &.sm-block
+    @media screen and (max-width: 772px)
+      width: 100% !important
+  &:disabled
+    opacity: 0.5
+  &.mt
+    margin-top: 1.98rem
+  &:hover
+    filter: brightness(1.1)
+
+input.form-input, select.form-input, text.form-input
+  @include input
+  &.bg
+    background: var(--bg-light)

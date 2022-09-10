@@ -1,0 +1,81 @@
+.admin-layout > .wrapper
+  display: grid
+  --aside-width: 16.375rem
+  grid-template-columns: var(--aside-width) 1fr
+  grid-gap: 3.375rem
+  max-width: 1460px
+  overflow-x: hidden
+  width: 100%
+  padding: 1rem
+  margin: 5rem auto
+  font-family: inherit
+  @media screen and (max-width: 1200px)
+    grid-gap: 1.4rem
+  @media screen and (max-width: 772px)
+    grid-template-columns: minmax(200px, 1fr)
+    grid-template-rows: auto auto
+    --aside-width: 100%
+    margin-top: 0
+    padding: 0
+  > aside
+    --padding-x: 1.5rem
+    max-width: var(--aside-width)
+    width: 100%
+    border-radius: 0.75rem
+    min-height: 20.875rem
+    height: fit-content
+    border: 1px solid var(--border)
+    padding: 1.1875rem 0
+    display: flex
+    flex-flow: column
+    h3
+      color: var(--text-regular)
+      text-transform: uppercase
+      font-size: 0.75rem
+      font-weight: bold
+      padding: 0 var(--padding-x)
+    .settings
+      margin-top: 1.6875rem
+      display: flex
+      flex-flow: column
+      a
+        padding: 0.625rem 1.5rem
+        font-size: 0.93rem
+        color: var(--text-placeholder)
+        text-decoration: none
+        font-weight: 400
+        transition: color 0.15s ease-in-out
+        i
+          width: 1rem
+          margin-right: 1.56rem
+        &.active, &:hover
+          color: var(--primary)
+        &.active::before
+          content: ' '
+          background: currentColor
+          width: 2px
+          height: 90%
+          position: absolute
+          top: 0
+          bottom: 0
+          margin: auto 0
+          left: -1px
+    @media screen and (max-width: 772px)
+      border-radius: 0
+      min-height: fit-content
+  > .content
+    width: 100%
+    @media screen and (max-width: 772px)
+      padding: 1rem
+
+    .dashboard-grid-group
+      --top-search-width: 19.375rem
+      display: grid
+      width: 100%
+      grid-template-columns: minmax(200px, 1fr) var(--top-search-width)
+      grid-gap: 1.68rem
+      @media screen and (max-width: 992px)
+        grid-template-columns: minmax(200px, 1fr)
+        grid-template-rows: auto auto
+        grid-gap: 1.4rem
+        --top-search-width: 100%

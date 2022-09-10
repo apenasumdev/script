@@ -1,0 +1,82 @@
+.setting-card
+  width: 100%
+  --padding-x:  2.1875rem
+  @media screen and (min-width: 772px)
+    min-height: fit-content
+    height: fit-content
+  border: 1px solid var(--border)
+  border-radius: 12px
+  padding: 2.6875rem 2.1875rem
+  font-family: inherit
+  &.without-x-padding
+    padding: 2.6875rem 0
+  form
+    display: flex
+    flex-flow: column
+    height: fit-content
+  h3
+    font-size: 1rem
+    color: var(--text-regular)
+    padding: 1rem 0 2rem
+    &:nth-child(1)
+      padding-top: 0
+    &.with-button
+      display: flex
+      align-items: center
+  &.without-x-padding h3
+    padding-left: var(--padding-x)
+    padding-right: var(--padding-x)
+  .mt
+    margin-top: 1.35rem
+  .add-button
+    margin-left: auto
+    background: var(--primary)
+    padding: 0.6rem 0.8rem
+    color: var(--text-on-primary)
+    border-radius: 5px
+    i.space
+      margin-left: 0.5rem
+    &:disabled
+      opacity: 0.5
+  .social-links
+    width: 100%
+    display: flex
+    flex-flow: column
+    .social-link-grid
+      display: grid
+      grid-template-columns: minmax(50px, 0.5fr) minmax(50px, 1fr) auto
+      grid-gap: 0.5rem
+      margin-bottom: 1rem
+      &:last-child
+        margin-bottom: 3rem
+  .delete-button
+    background: var(--accent)
+    padding: 0.3rem 1rem
+    height: 100%
+    border-radius: 4px
+    color: var(--text-on-accent)
+    &.py
+      padding: 0.6rem 1rem
+  .no-social-links
+    color: var(--text-placeholder)
+    text-align: center
+    width: 100%
+    padding: 1rem 0
+    font-weight: 400
+    user-select: none
+.no-item
+  color: var(--text-placeholder)
+  text-align: center
+  width: 100%
+  padding: 1rem 0
+  font-weight: 400
+  user-select: none
+.network-grid-container
+  width: 100%
+  display: flex
+  flex-flow: column
+.network-grid
+  display: grid
+  grid-template-columns: minmax(50px,0.6fr) minmax(50px, 0.4fr) minmax(50px,150px) minmax(34px,44px)
+  grid-gap: 0.5rem
+  margin-bottom: 0.5rem

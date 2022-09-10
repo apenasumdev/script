@@ -1,0 +1,22 @@
+.spinner-container
+    width: fit-content
+    height: fit-content
+    display: flex
+    &.max-size
+        width: 100%
+        height: 100%
+    &.center
+        justify-content: center
+        align-items: center
+.spinner
+    width: 35px
+    height: 35px
+    border: 4px solid var(--border)
+    border-left-color: var(--primary)
+    border-radius: 100%
+    animation: spin 1.1s infinite linear
+@keyframes spin
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)

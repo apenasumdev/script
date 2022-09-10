@@ -1,0 +1,298 @@
+.video-box
+  position: fixed
+  z-index: 50
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background: var(--bg-light)
+  @media screen and (max-width: 992px)
+    min-height: 100vh
+    height: fit-content
+    position: absolute
+  .wrapper
+    display: grid
+    grid-template-columns: 1fr auto
+    height: 100%
+    @media screen and (max-width: 992px)
+      grid-template-columns: 1fr
+      grid-template-rows: auto auto
+    .video-player-container
+      width: 100%
+      height: 100vh
+      @media screen and (max-width: 992px)
+        height: 65vh
+      .close-btn
+        position: absolute
+        top: 2rem
+        left: 2rem
+        width: 3.25rem
+        height: 3.25rem
+        background: var(--control-bg)
+        color: var(--controls-color)
+        border-radius: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 1.4rem
+        box-shadow: 0 0 5px rgba(0,0,0,0.5)
+        @media screen and (max-width: 772px)
+          top: 1.5rem
+          left: 1.5rem
+          width: 2.25rem
+          height: 2.25rem
+          font-size: 1rem
+    aside
+      width: 100%
+      max-width: 34rem
+      min-width: 34rem
+      padding: 3.43rem 2.03rem
+      z-index: 55
+      display: flex
+      flex-flow: column
+      background: var(--bg-light)
+      @media screen and (max-width: 992px)
+        padding: 2.6rem 1.8rem
+        max-width: 100%
+        min-width: auto
+        min-height: 100vh
+        height: fit-content
+      .user-profile
+        display: flex
+        align-items: center
+        width: 100%
+        .avatar img
+          width: 2.625rem
+          height: 2.625rem
+          object-fit: cover
+          border-radius: 100%
+          margin-right: 0.775rem
+        .details
+            width: 100%
+            max-width: calc(100% - 89px - 16px - 54px)
+            h3, h4
+              text-overflow: ellipsis
+              overflow: hidden
+              max-width: 100%
+              width: 100%
+
+            h3
+              font-weight: 400
+              color: var(--text-regular)
+              font-size: 1.19rem
+            h4
+              font-weight: 300
+              color: var(--text-regular)
+              font-size: 0.85rem
+              margin-top: 0.1rem
+            span
+              padding: 0 0.5rem
+        .more-link
+          background: transparent
+          min-width: 138.4px
+          @media screen and (max-width: 772px)
+            min-width: 90px
+          width: auto
+          border: 1px solid var(--primary)
+          border-radius: 2px
+          margin-left: auto
+          color: var(--primary)
+          font-size: 0.85rem
+          font-weight: 500
+          padding: 0.65rem 2.475rem
+          transition: color 0.15s, background-color 0.15s ease-in-out
+          &:hover
+            color: var(--text-on-primary)
+            background: var(--primary)
+          i
+            margin-left: 0.4rem
+        @media screen and (max-width: 772px)
+          .details h4 span
+            padding: 0
+          .more-link
+            padding: 0.65rem 1rem
+
+      .text
+        word-break: break-all
+        margin-top: 1.66rem
+        font-size: 1.125rem
+        font-weight: 300
+        font-family: inherit
+        width: 100%
+        color: var(--text-regular)
+        a, b
+          text-decoration: none
+          font-weight: 400
+          color: inherit
+      .music
+        margin-top: 0.768rem
+        font-size: 1.125rem
+        font-weight: 500
+        font-family: inherit
+        display: flex
+        align-items: center
+        color: var(--text-regular)
+        i
+          margin-right: 1.225rem
+          font-size: 1rem
+        b
+          max-width: calc(100% - 16px - 76px - 50px)
+          overflow: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
+        a
+          margin-left: auto
+          color: var(--primary)
+          text-decoration: none
+          padding: 0.4rem 0.6rem
+          i
+            margin-right: 0.54rem
+      .states
+        margin-top: 1.66rem
+        display: flex
+        align-items: center
+        font-size: 1rem
+        font-weight: 500
+        color: var(--text-regular)
+        .states-count
+          display: flex
+        .likes, .comments, .views, .shares
+          padding: 0 0.5rem
+          display: flex
+          align-items: center
+          i
+            margin-right: 0.516rem
+            font-size: 1.5rem
+        .share-actions
+          margin-left: auto
+          display: flex
+          .share-action
+            background: var(--primary)
+            color: var(--text-on-primary)
+            border-radius: 100%
+            min-width: 33.5px
+            min-height: 33.5px
+            margin-left: 4.72px
+            font-size: 1rem
+            display: flex
+            align-items: center
+            text-decoration: none
+            justify-content: center
+            transition: filter 0.15s ease-in-out
+            @media screen and (max-width: 772px)
+              &.copy-link
+                display: flex
+            &:hover
+              filter: contrast(0.9)
+            &.facebook
+              background: #1877F2
+            &.twitter
+              background: #55ACEE
+            &.whatsapp
+              background: #25D366
+            &.copy-link
+              background: #6784FF
+      .share-url
+        width: 100%
+        margin: 1rem 0
+        color: var(--text-regular)
+        input
+          width: 100%
+          font-size: 0.85rem
+          color: var(--text-regular)
+          font-weight: 300
+          font-family: inherit
+          padding: 0.7rem 2.5rem
+          background: var(--bg-light)
+          border: 1px solid var(--border)
+          transition: border-color 0.15s ease-in-out
+          outline: 0
+          &:focus
+            border-color: var(--primary)
+            ~ i.prepend
+              color: var(--primary) !important
+
+        i.prepend
+          position: absolute
+          top: 0
+          bottom: 0
+          left: 0.6rem
+          z-index: 1
+          height: 100%
+          display: flex
+          align-items: center
+          color: inherit
+          transition: color 0.15s ease-in-out
+        button
+          position: absolute
+          top: 0
+          bottom: 0
+          right: 0.8rem
+          height: 100%
+          z-index: 1
+          font-size: 0.9rem
+          display: flex
+          align-items: center
+          outline: 0
+          transition: color 0.15s ease-in-out
+          &:hover
+            color: var(--primary)
+      .button
+        width: 100%
+        height: fit-content
+        padding: 0.85rem 1rem
+        font-size: 1.125rem
+        border-radius: 2px
+        font-family: inherit
+        font-weight: 400
+        color: var(--text-regular)
+        text-align: center
+        text-decoration: none
+        transition: color 0.15s, background-color 0.15s ease-in-out
+        background: transparent
+        i
+          margin-right: 0.8rem
+        &.fetch-button
+          margin-top: auto
+          background: var(--accent)
+          color: var(--text-on-accent)
+          i
+            margin-right: 0
+          span
+            margin-left: 0.8rem
+            max-width: fit-content
+            transition: max-width 0.15s ease-in-out
+            width: 100%
+          &.fetching
+            span
+              display: none
+            i
+              animation: spin 1.1s infinite linear
+
+        .ripple-container .ripple
+          --ripple-effect: rgba(255,255,255,0.2)
+        &.accent-button
+          border: 1px solid var(--accent)
+          color: var(--accent)
+          &:hover
+            background: var(--accent)
+            color: var(--text-on-accent)
+        &.primary-button
+          border: 1px solid var(--primary)
+          color: var(--primary)
+          &:hover
+            background: var(--primary)
+            color: var(--text-on-primary)
+
+      .button-group
+        margin-top: auto
+        display: grid
+        //grid-template-columns: 1fr 1fr
+        grid-auto-flow: column
+        grid-gap: 1rem
+        @media screen and (max-width: 772px)
+          grid-template-columns: 1fr
+          grid-template-rows: 1fr 1fr
+          grid-auto-flow: row
+        .button
+          min-width: 200px

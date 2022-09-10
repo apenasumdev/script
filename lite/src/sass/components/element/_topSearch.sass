@@ -1,0 +1,93 @@
+.top-search
+  --top-search-height: 33.25rem
+  max-width: var(--top-search-width)
+  width: 100%
+  min-height: var(--top-search-height)
+  max-height: var(--top-search-height)
+  height: 100%
+  border: 1px solid var(--border)
+  border-radius: 0.75rem
+  padding: 1.77rem 0
+  --padding-x: 2.08rem
+  font-family: inherit
+  overflow: hidden
+  .border-bottom::after
+    content: ' '
+    background: var(--text-heading-4)
+    width: 85%
+    height: 1px
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0 auto
+    bottom: -1rem
+  .header
+    padding: 0 var(--padding-x)
+    color: var(--text-regular)
+    font-weight: bold
+    font-size: 1.625rem
+    margin-bottom: 1rem
+    @extend .border-bottom
+  .body
+    display: flex
+    flex-flow: column
+    overflow: hidden
+    height: calc(100% - 1.1rem)
+
+  .items
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(8.25rem, 1fr))
+    grid-gap: 0.625rem
+    grid-template-rows: auto
+    padding: 0.5rem 0.5rem
+
+    .item
+      width: 100%
+      height: 12.375rem
+      border-radius: 5px
+      overflow: hidden
+      cursor: pointer
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .details
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: fit-content
+        padding: 7px 13px 17px
+        background: linear-gradient(rgba(22, 24, 35, 0) 2.92%, rgba(22, 24, 35, 0.5) 98.99%)
+        img
+          width: 2rem
+          height: 2rem
+          object-fit: cover
+          border-radius: 100%
+          border: 1px solid white
+          margin-bottom: 5px
+        p
+          color: white
+          font-size: 0.8rem
+          font-weight: 500
+          display: flex
+          align-items: center
+          i
+            margin-right: 7px
+            font-size: 0.6rem
+
+  .no-records
+    color: var(--text-heading-5)
+    font-weight: 400
+    font-size: 1.5rem
+    font-family: inherit
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    padding-top: 3rem
+    user-select: none
+    pointer-events: none
+    padding-bottom: 5rem

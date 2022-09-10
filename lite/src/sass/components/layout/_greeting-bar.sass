@@ -1,0 +1,41 @@
+.greeting-bar
+  background: var(--greeting-bar-bg)
+  color: var(--greeting-bar-color)
+  padding: 0.5rem 1rem
+  display: flex
+  justify-content: space-between
+
+  .quote
+    b
+      padding-left: 1rem
+      margin-left: 0.5rem
+      &::before
+        content: '-'
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+  .greeting
+    display: none
+    max-width: calc(100% - 170px)
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+  @media only screen and (max-width: 772px)
+    .greeting
+      display: block
+    .quote
+      display: none
+    .time
+      display: none
+
+  .actions
+    text-align: right
+    a, button
+      color: var(--greeting-bar-color)
+      text-decoration: none
+      padding-left: 0.5rem
+      font-size: 1rem
+      font-weight: 500
+      &:hover
+        text-decoration: underline

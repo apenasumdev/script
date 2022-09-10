@@ -1,0 +1,140 @@
+.ql-toolbar.ql-snow
+  border: 1px solid var(--border) !important
+  .ql-stroke
+    stroke: var(--text-regular) !important
+  .ql-fill
+    fill: var(--text-regular) !important
+  .ql-picker-options
+    background: var(--bg-light) !important
+  .ql-picker
+    color: var(--text-regular) !important
+    .ql-picker-label:hover
+      color: var(--primary) !important
+  .ql-picker-item:hover
+    color: var(--primary) !important
+  .ql-picker-item.ql-selected
+    color: var(--primary) !important
+  &.ql-toolbar button:hover
+    color: var(--primary) !important
+    .ql-stroke
+      stroke: var(--primary) !important
+    .ql-fill
+      fill: var(--primary) !important
+
+
+.ql-container.ql-snow
+  border-color: var(--border) !important
+.page-container, .ql-editor, .page-article
+  max-width: 100%
+  width: 100%
+  margin-top: 2rem
+  color: var(--text-regular) !important
+  font-family: var(--font-family)
+
+  blockquote
+    color: var(--text-regular) !important
+    border-left: 4px solid var(--primary) !important
+    margin: 10px 0 !important
+    padding: 4px 1rem
+
+  pre
+    background-color: var(--accent) !important
+    color: var(--text-on-accent) !important
+    overflow: visible
+    border-radius: 0
+    padding: 0.5rem 1rem
+
+  @for $i from 1 through 8
+    .ql-indent-#{$i}
+      padding-left: #{$i * 3}rem
+
+  p
+    font-size: inherit
+    font-weight: 300
+    text-align: justify
+    margin: 0.8rem 0 2rem
+
+  h3
+    font-size: inherit
+    font-weight: 500
+    margin: 0.8rem 0
+
+  ul, ol
+    margin: 1.2rem 0 0.7rem
+    padding: 0 3rem 0 4rem
+    font-size: inherit
+    font-weight: 300
+    li
+      margin: 0.8rem 0
+      line-height: 1.8rem
+      font-weight: 300
+    @media screen and ( max-width: 772px )
+      padding: 0 1.5rem 0 2rem
+
+
+  h1
+    font-weight: bold
+    font-size: 2.25rem
+    text-align: center
+    color: inherit
+    max-width: 800px
+    width: 100%
+    margin: 0 auto
+    font-family: inherit
+
+  a
+    color: var(--primary)
+    text-decoration: none !important
+    font-weight: 500
+    font-family: inherit
+    &:hover
+      text-decoration: underline !important
+
+  iframe
+    margin: 0 auto
+    max-width: 800px !important
+    width: 100% !important
+    min-height: 450px
+    display: flex
+
+  img
+    max-width: 800px !important
+    width: 100%
+    display: flex
+    height: auto
+    margin: 0 auto
+
+  .content
+    font-size: 1.125rem
+    font-weight: 300
+    word-break: break-word
+    text-align: justify
+    color: inherit
+    font-family: inherit !important
+
+  //p
+  //  font-size: 1.125rem
+  //  font-weight: 300
+  //  word-break: break-word
+  //  text-align: justify
+  //  margin-bottom: 1.5rem
+  //  font-family: inherit
+  //  color: inherit
+  //h3
+  //  font-size: inherit
+  //  font-family: inherit
+  //  font-weight: 500
+  //  margin: 0.5rem 0
+  //  color: inherit
+  //ol, ul
+  //  padding-left: 2.5rem
+  //  margin-bottom: 1.5rem
+  //  font-family: inherit
+  //  color: inherit
+  //  font-weight: 300 !important
+  //  li
+  //    margin-bottom: 0.5rem
+  //    font-family: inherit
+
+.ql-editor
+  margin-top: 0 !important

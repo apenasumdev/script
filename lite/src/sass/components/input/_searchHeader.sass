@@ -1,0 +1,88 @@
+header > .search
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    background-color: var(--primary)
+    height: var(--header-height)
+    border-bottom: 2px solid var(--header-search-border)
+    @supports (clip-path: circle())
+        clip-path: circle(15px at calc(100% + 25px) calc(var(--header-height) / 2.1))
+    @supports not (clip-path: circle())
+        display: none
+    transition: clip-path 0.5s, background-color 1s ease-in-out
+    color: var(--header-search-color)
+    &.focus
+        background-color: var(--header-search-bg)
+        @supports (clip-path: circle())
+            clip-path: circle(calc(100% * 1.5) at calc(100% + 5px) calc(var(--header-height) / 2.1))
+        @supports not (clip-path: circle())
+            display: block
+    &:focus-within
+        .search-icon
+            color: var(--header-search-color-hover)
+
+    input
+        width: 100%
+        height: 100%
+        padding: 0.5rem 6.5rem 0.5rem 3.5rem
+        font-size: 1.2rem
+        font-family: inherit
+        font-weight: 300
+        color: var(--header-search-color)
+        pointer-events: none
+        cursor: none
+        &::placeholder
+            transition: padding 0.15s ease-in-out
+            font-weight: 300
+            color: var(--text-placeholder)
+        &:focus::placeholder
+            padding-left: 0.5rem
+        @media screen and ( max-width: 772px )
+            padding: 0.5rem 6rem 0.5rem 3.5rem
+    &.focus input
+        pointer-events: all
+        cursor: text
+    .search-icon
+        font-size: 1.5rem
+        color: inherit
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 1rem
+        margin: auto 0
+        display: flex
+        align-items: center
+        transition: color 0.15s ease-in-out
+    .actions
+        position: absolute
+        top: 0
+        bottom: 0
+        height: 100%
+        display: flex
+        align-items: center
+        right: 2rem
+        margin: auto 0
+        @media screen and ( max-width: 772px )
+            right: 1rem
+            
+        button
+            font-size: 1.5rem
+            transition: color 0.15s ease-in-out
+            color: var(--header-search-color)
+            &:hover
+                color: var(--header-search-color-hover) !important
+            &.border-left
+                border-left: 1px solid var(--header-search-border)
+                padding-left: 1rem        
+            &.copy-icon
+                font-size: 0.9rem
+                margin-right: 1rem
+        .spinner-container
+            width: fit-content
+            height: fit-content
+            display: flex
+            .spinner
+                width: 30px
+                height: 30px
+            

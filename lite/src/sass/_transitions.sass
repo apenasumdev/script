@@ -1,0 +1,125 @@
+.fade-enter-active, .fade-leave-active
+  transition: opacity .5s
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
+
+
+.animated
+  animation-duration: 0.5s
+  animation-fill-mode: both
+  @for $i from 1 through 9  
+    &.d-#{$i}
+        animation-duration: #{$i}00ms
+
+
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+
+.fadeIn
+  animation-name: fadeIn
+
+
+@keyframes fadeOut
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+
+.fadeOut
+  animation-name: fadeOut
+
+@keyframes heightMax
+  from
+    max-height: 0
+  to
+    max-height: 21rem
+
+
+.heightMax
+  animation-name: heightMax
+
+@keyframes heightMin
+  from
+    max-height: 21rem
+  to
+    max-height: 0
+
+
+.heightMin
+  animation-name: heightMin
+
+
+
+@keyframes fadeInLeft
+  from
+    opacity: 0
+    transform: translate3d(-100%, 0, 0)
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+.fadeInLeft
+  animation-name: fadeInLeft
+
+@keyframes fadeInRight
+  from
+    opacity: 0
+    transform: translate3d(100%, 0, 0)
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+.fadeInRight
+  animation-name: fadeInRight
+
+@keyframes fadeOutRight
+  from
+    opacity: 1
+  to
+    opacity: 0
+    transform: translate3d(100%, 0, 0)
+
+.fadeOutRight
+  animation-name: fadeOutRight
+
+@keyframes fadeOutLeft
+  from
+    opacity: 1
+  to
+    opacity: 0
+    transform: translate3d(-100%, 0, 0)
+
+.fadeOutLeft
+  animation-name: fadeOutLeft
+
+
+@keyframes zoomIn
+  from
+    opacity: 0
+    transform: scale3d(0.3, 0.3, 0.3)
+  50%
+    opacity: 1
+
+.zoomIn
+  animation-name: zoomIn
+
+@keyframes zoomOut
+  from
+    opacity: 1
+  50%
+    opacity: 0
+    transform: scale3d(0.3, 0.3, 0.3)
+  to
+    opacity: 0
+
+.zoomOut
+  animation-name: zoomOut
+

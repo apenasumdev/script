@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{lMDr:function(e,t,n){"use strict";n.r(t);var s={name:"Dashboard"},a=n("KHd+"),r=Object(a.a)(s,(function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"dashboard-grid-group"},[t("x-element-recent-search"),this._v(" "),t("x-element-top-search")],1)}),[],!1,null,null,null);t.default=r.exports}}]);

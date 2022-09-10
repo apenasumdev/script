@@ -1,0 +1,43 @@
+.message-strip-container
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  height: fit-content
+  transition: bottom 0.25s ease-in-out
+  &.bottom-offset
+    bottom: -50px
+  .message-strip
+    z-index: 999999
+    background: var(--primary)
+    color: var(--text-on-primary)
+    display: flex
+    padding: 0.8rem 1.5rem
+    align-items: center
+    opacity: 1
+    transform: scaleY(1)
+    transform-origin: bottom
+    font-size: 0.9rem
+    transition: opacity 0.25s, transform 0.25s ease-in-out
+    &.hide
+      opacity: 0
+      transform: scaleY(0)
+    .progress
+      background: rgba(0,0,0,0.15)
+      position: absolute
+      top: 0
+      left: 0
+      width: 70%
+      height: 100%
+      transition: width 0.5s linear
+    .text
+      width: calc(100% - 50px - 20px)
+      overflow: hidden
+      margin-left: 20px
+      text-overflow: ellipsis
+      word-break: break-all
+      text-align: center
+    button
+      margin-left: auto
+      font-size: 1.1rem
+      color: inherit

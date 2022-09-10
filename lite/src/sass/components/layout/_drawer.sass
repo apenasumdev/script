@@ -1,0 +1,157 @@
+.drawer
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 40
+  width: 100%
+  height: 100vh
+  overflow: hidden
+  .overlay
+    width: 100%
+    height: 100%
+    background: black
+    opacity: 0
+    display: block
+    transition: opacity 0.25s ease-in-out
+
+  aside
+    --padding-x: 1.84rem
+    --padding-top: 1.75rem
+    --padding-bottom: 1.75rem
+    --content-padding-top: 3.75rem
+    --title-margin-bottom: 1.856rem
+    --logo-height: 6.625rem
+    --pages-margin-top: 6.69rem
+    --version-height: 33px
+    --close-btn-size: 1.5rem
+    max-width: 17.56rem
+    width: 100%
+    position: fixed
+    left: 0
+    top: 0
+    display: flex
+    flex-flow: column
+    height: 100vh
+    background: var(--drawer-bg)
+    animation: drawer-close 0.25s 1 ease-in-out
+    padding: var(--padding-top) 0 var(--padding-bottom) 0
+    @media screen and (max-height: 640px)
+      --padding-top: 1.5rem
+      --padding-bottom: 1.5rem
+      --logo-height: 5rem
+      --content-padding-top: 3rem
+      --title-margin-bottom: 1.3rem
+      --pages-margin-top: 3rem
+      --version-height: 33px
+    @media screen and (max-width: 772px)
+      --logo-height: 5rem
+      --content-padding-top: 3rem
+    @keyframes drawer-close
+      from
+        transform: translateX(0%)
+      to
+        transform: translateX(-100%)
+
+    button.close-btn
+      --size: var(--close-btn-size)
+      padding: 0 0 0 var(--padding-x)
+      display: block
+      font-size: 2rem
+      width: var(--size)
+      min-width: var(--size)
+      height: var(--size)
+      min-height: var(--size)
+      background: var(--drawer-bg)
+      span
+        width: 2px
+        height: 100%
+        background: var(--drawer-text)
+        position: absolute
+        top: 0
+        right: calc(-0.5 * var(--size))
+        transition: background-color 0.15s ease-in-out
+      &:hover span
+        background-color: var(--drawer-text-hover)
+      span:nth-child(1)
+        transform: rotate(45deg)
+      span:nth-child(2)
+        transform: rotate(-45deg)
+    .content
+      padding-top: var(--content-padding-top)
+      .logo
+        display: block
+        display: flex
+        justify-content: center
+        img
+          width: auto
+          height: var(--logo-height)
+      h3.title
+        color: var(--drawer-text-header-color)
+        font-size: 1rem
+        font-weight: 400
+        padding: 0 var(--padding-x)
+        margin-bottom: var(--title-margin-bottom)
+        margin-top: var(--pages-margin-top)
+      .pages
+        width: 100%
+        height: 100%
+        font-family: inherit
+        display: flex
+        flex-flow: column
+        overflow: auto
+        max-height: calc(100vh - var(--padding-top) - var(--padding-bottom) - var(--title-margin-bottom) - var(--pages-margin-top) - var(--logo-height) - var(--close-btn-size) - var(--version-height) - var(--content-padding-top) - 50px)
+        a
+          color: var(--drawer-text)
+          text-decoration: none
+          font-size: 1rem
+          font-weight: 400
+          padding: 0.665rem var(--padding-x)
+          &::after
+            content: attr(data-label)
+            margin: 0 var(--padding-x)
+            background: var(--drawer-text-hover)
+            max-width: 0
+            width: fit-content
+            overflow: hidden
+            color: transparent
+            bottom: 3px
+            height: 2px
+            border-radius: 5px
+            position: absolute
+            left: 0
+            transition: max-width 0.15s ease-in-out
+          &:hover::after, &.active::after
+            max-width: 17.56rem
+    .version
+      margin-top: auto
+      padding: 1rem 1rem 0 1rem
+      width: 100%
+      height: var(--version-height)
+      &::before
+        content: ' '
+        width: 80%
+        height: 2px
+        background: var(--footer-version-border)
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        margin: 0 auto
+      p
+        width: 100%
+        text-align: center
+        font-size: 0.85rem
+        font-weight: 400
+        color: var(--drawer-text)
+        font-family: inherit
+  &.show
+    display: block !important
+    .overlay
+      opacity: 0.5
+    aside
+      animation: drawer-open 0.25s 1 ease-in-out
+      @keyframes drawer-open
+        from
+          transform: translateX(-100%)
+        to
+          transform: translateX(0)

@@ -1,0 +1,46 @@
+.scroll-to-top
+  position: fixed
+  bottom: 3rem
+  right: 1.5rem
+  width: fit-content
+  height: fit-content
+  button
+    background: var(--accent)
+    color: var(--text-on-accent)
+    border-radius: 5px
+    width: 3.5rem
+    height: 3.5rem
+    font-size: 1.5rem
+    display: flex
+    align-items: center
+    justify-content: center
+    box-shadow: 0 0 5px rgba(0,0,0,0.5)
+    transition: background 0.15s, color 0.15s ease-in-out
+    animation: scroll-to-top-show 0.15s 1 ease-in-out
+    animation-fill-mode: both
+    animation-direction: alternate
+
+    &.hide
+      animation: scroll-to-top-hide 0.15s 1 ease-in-out
+      animation-fill-mode: both
+      animation-direction: alternate
+    &:hover
+      background: var(--primary)
+      color: var(--text-on-primary)
+    @keyframes scroll-to-top-show
+      from
+        transform: translateY(4rem)
+        opacity: 0
+      to
+        transform: translateY(0)
+        opacity: 1
+    @keyframes scroll-to-top-hide
+      from
+        transform: translateY(0rem)
+        opacity: 1
+      to
+        transform: translateY(3rem)
+        opacity: 0
+        user-select: none
+        pointer-events: none
+        -webkit-user-drag: none

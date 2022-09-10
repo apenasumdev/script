@@ -1,0 +1,52 @@
+table
+  width: 100%
+  table-layout: auto
+  position: relative
+  height: fit-content
+  border-spacing: 0
+  color: var(--text-regular)
+  font-family: inherit
+  thead
+    background: var(--text-heading-5)
+    border-bottom: 1px solid var(--text-heading-4)
+
+    tr th
+      padding: 0.9rem 1rem
+      white-space: nowrap
+  tbody
+    position: relative
+    tr
+      background-color: var(--bg-light)
+      position: relative
+      &:nth-child(even)
+        background-color: var(--bg-dark)
+      td
+        position: relative
+        padding: 0.8rem 1rem
+        text-align: center
+        vertical-align: center
+        width: fit-content
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        &.start
+          text-align: left
+          width: 100%
+          max-width: 10px
+        &.end
+          text-align: right
+          padding-left: 1.2rem
+          padding-right: 1.2rem
+        .btn
+          padding: 0.5rem
+          border-radius: 5px
+          transition: filter 0.15s ease-in-out
+          &:hover
+            filter: brightness(1.1)
+          &.edit-button
+            color: var(--text-on-primary)
+            background-color: var(--primary)
+            padding: 0.5rem 0.6rem
+          &.delete-button
+            color: var(--text-on-accent)
+            background-color: var(--accent)

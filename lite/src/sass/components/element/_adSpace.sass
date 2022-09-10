@@ -1,0 +1,50 @@
+.ad-container
+  margin: auto
+  display: flex
+  align-items: center
+  justify-content: center
+  &.space-below
+    margin-bottom: 5.5rem
+  div
+    margin: 1rem 0
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    color: var(--text-heading-2)
+    border: 1px solid var(--border)
+    border-radius: 5px
+    font-family: inherit
+    font-size: 1.125rem
+    font-weight: 400
+  .ad-square
+    min-width: 336px
+    min-height: 280px
+    width: fit-content
+    height: fit-content
+    max-width: 100%
+    @media screen and (max-width: 772px)
+      min-width: 90vw !important
+      max-width: 90vw !important
+
+  .ad-below-search,
+  .ad-above-how-to-download,
+  .ad-below-how-to-download,
+  .ad-above-steps,
+  .ad-below-steps,
+  .ad-above-faq,
+  .ad-below-faq
+    @extend .ad-banner
+  .ad-banner
+    max-width: 728px
+    max-height: 90px
+    min-width: 728px
+    min-height: 90px
+    width: 100%
+    height: 100%
+    @media screen and (max-width: 772px)
+      min-height: 90px !important
+      min-width: 90vw !important
+      max-width:90vw !important
+      width: fit-content !important
+      height: fit-content !important

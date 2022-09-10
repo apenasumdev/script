@@ -1,0 +1,97 @@
+header
+    width: 100%
+    padding: 0 1.8rem
+    max-height: var(--header-height)
+    min-height: var(--header-height)
+    height: 100%
+    overflow: hidden
+    position: sticky
+    top: 0
+    background: var(--header-bg)
+    border-bottom: 2px solid var(--header-border)
+    z-index: 30
+    @media screen and ( max-width: 772px )
+        padding: 0 1rem
+        
+    nav
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: var(--header-height)
+        font-family: inherit
+        color: var(--header-color)
+        .logo
+            display: inherit
+            align-items: inherit
+            img
+                width: auto
+                height: 35px
+                filter: var(--header-logo-filter)
+                @media screen and (max-width: 772px)
+                    display: none
+            button
+                margin-right: 1.5rem   
+                font-size: 1.2rem 
+                color: var(--header-color)
+                &:hover
+                    color: var(--header-color-hover)
+        .mobile-logo
+            display: none
+            img
+                width: auto
+                height: 35px
+                object-fit: contain
+                filter: var(--header-logo-filter)
+            @media screen and (max-width: 772px)
+                display: flex
+        .nav
+            a
+                color: var(--header-color)
+                text-decoration: none
+                font-size: 1.125rem
+                font-weight: 500
+                transition: color 0.15s ease-in-out
+                i
+                    margin-left: 0.6rem
+                &:hover
+                    color: var(--header-color-hover)
+            .nav-support
+                display: flex
+                align-items: center
+                @media screen and ( max-width: 772px )
+                    span
+                        display: none
+                    i
+                        margin-left: 0
+            .anchor
+                @extend .style-none
+                color: var(--header-color)
+                font-size: 1.5rem
+                font-weight: 500
+                @media screen and ( max-width: 772px )
+                    font-size: 1.2rem
+                &::after
+                    content: ' '
+                    position: absolute
+                    bottom: -5px
+                    right: 0
+                    left: 0
+                    margin: 0 auto
+                    width: 0px
+                    height: 3px
+                    border-radius: 5px
+                    background: var(--header-color-hover)
+                    transition: width 0.15s ease-in-out
+                &:hover::after
+                    width: 40px
+                &.active::after
+                    width: 30px
+        .search
+            margin-left: 15rem
+            @media screen and ( max-width: 772px)
+                margin: 0
+            button
+                font-size: 1.5rem
+                color: var(--header-color)
+                &:hover
+                   color: var(--header-color-hover) 

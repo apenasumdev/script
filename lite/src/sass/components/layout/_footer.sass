@@ -1,0 +1,85 @@
+footer
+  width: 100%
+  height: fit-content
+  background: var(--footer-bg)
+  color: var(--footer-text)
+  padding: 0 2rem
+  display: flex
+  justify-content: center
+  border-top: 2px solid var(--footer-border)
+  font-family: inherit
+  .wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 2.1rem 0
+    max-width: 1650px
+    width: 100%
+    @media screen and (max-width: 992px)
+      flex-flow: column
+  .actions
+    display: inherit
+    align-items: inherit
+    @media screen and (max-width: 772px)
+      flex-flow: column-reverse
+
+    #google_translate_element
+      margin-right: 2rem
+      @media screen and (max-width: 772px)
+        margin-right: 0
+        margin-top: 1rem
+      .goog-te-gadget
+        border: 1px solid var(--footer-text) !important
+        padding: 0.3rem 0.5rem
+        border-radius: 5px
+        .goog-te-gadget-simple
+          background: transparent !important
+          border: 0 !important
+          img
+            display: none
+          span a
+            color: var(--footer-text)
+            font-family: inherit
+            span
+              border: 0 !important
+              color: var(--footer-text) !important
+              &:last-child
+                margin-left: 1rem
+    a
+      color: var(--footer-text)
+      text-decoration: none
+      font-size: 1rem
+      margin: 0 0.8rem
+      transition: color 0.15s ease-in-out
+      &:hover
+        color: var(--footer-text-hover)
+  .nav
+    color: var(--footer-text)
+    display: flex
+    align-items: center
+    @media screen and (max-width: 992px)
+      margin-top: 1rem
+    @media screen and (max-width: 772px)
+      flex-flow: column
+    a
+      color: var(--footer-text)
+      text-decoration: none
+      font-size: 1rem
+      font-family: inherit
+      margin-right: 2rem
+      transition: color 0.15s ease-in-out
+      &:hover
+        color: var(--footer-text-hover)
+      &::after
+        content: ' '
+        width: 1px
+        background-color: var(--footer-text)
+        height: 120%
+        position: absolute
+        right: -1rem
+        top: 0
+        bottom: 0
+      @media screen and (max-width: 772px)
+        margin: 0 0 1rem
+        &::after
+          display: none

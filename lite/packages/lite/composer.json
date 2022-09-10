@@ -1,0 +1,26 @@
+{
+    "name": "codespikex/lite",
+    "description": "Lightweight PHP Framework",
+    "type": "library",
+    "require": {
+        "php": "^7.0.0",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-pdo": "*",
+        "nesbot/carbon": "^2.0@dev"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lite\\": ""
+        },
+        "files": ["helpers.php"]
+    },
+    "authors": [
+        {
+            "name": "codespikex",
+            "email": "codespikex@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
